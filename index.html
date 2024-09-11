@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Investment Growth Calculator</h1>
+
+        <table id="investment-table">
+            <thead>
+                <tr>
+                    <th>Month</th>
+                    <th>Invested Money ($)</th>
+                    <th>Total After This Month ($)</th>
+                </tr>
+            </thead>
+            <tbody id="investment-body">
+                <tr>
+                    <td>1</td>
+                    <td><input type="number" placeholder="Enter money" required></td>
+                    <td class="total-per-month">$0.00</td>
+                </tr>
+            </tbody>
+        </table>
+        <button id="add-month" class="btn">Add Month</button>
+
+        <div class="global-params">
+            <div class="input-group">
+                <label for="percent-increase">Monthly Percent Increase (pr):</label>
+                <input type="number" id="percent-increase" placeholder="Enter %" required>
+            </div>
+
+            <div class="input-group">
+                <label for="time-for-calculating">Time for calculating (months):</label>
+                <input type="number" id="time-for-calculating" placeholder="Enter months" required>
+            </div>
+
+            <div class="input-group">
+                <label for="npl">npl (%):</label>
+                <input type="number" id="npl" placeholder="Enter npl" required>
+            </div>
+
+            <div class="input-group">
+                <label for="tax">Tax (%):</label>
+                <input type="number" id="tax" placeholder="Enter tax" required>
+            </div>
+
+            <div class="input-group">
+                <label for="other-spending">Other Spending (%):</label>
+                <input type="number" id="other-spending" placeholder="Enter other spending" required>
+            </div>
+        </div>
+
+        <button id="calculate" class="btn">Calculate Total Money</button>
+
+        <div class="result">
+            <h3>Total Money After Calculation:</h3>
+            <p id="result">$0.00</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
